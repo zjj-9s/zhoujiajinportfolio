@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>周嘉进 · 工业设计作品集</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Noto Sans SC",sans-serif;background:#f5f5f5;color:#333;line-height:1.7;}
+header{background:#fff;border-bottom:1px solid #ddd;}
+header h1{font-size:26px;font-weight:600;color:#222;margin-bottom:2px;}
+header .sub{font-size:14px;color:#888;}
+
+.container{max-width:1100px;margin:0 auto;padding:32px 24px 60px;}
+.sec{margin-bottom:40px;}
+.sec-title{font-size:15px;font-weight:600;color:#999;letter-spacing:2px;padding-bottom:8px;border-bottom:2px solid #ddd;margin-bottom:16px;}
+.sec-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;}
+.sec-hdr .name{font-size:15px;font-weight:600;color:#333;}
+.sec-hdr .dl{font-size:12px;color:#888;padding:4px 12px;border:1px solid #ddd;border-radius:4px;text-decoration:none;}
+.sec-hdr .dl:hover{border-color:#999;color:#333;}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:6px;margin-bottom:24px;}
+.grid img{width:100%;display:block;border:1px solid #ddd;border-radius:4px;cursor:pointer;}
+.grid img:hover{border-color:#999;}
+.r-box{background:#fff;border:1px solid #ddd;border-radius:6px;overflow:hidden;max-width:460px;}
+.r-box img{width:100%;display:block;}
+.r-box .d{padding:12px 16px;text-align:center;border-top:1px solid #eee;}
+.r-box .d a{display:inline-block;padding:8px 22px;background:#333;color:#fff;border-radius:4px;font-size:13px;text-decoration:none;}
+.r-box .d a:hover{background:#555;}
+.c-box{background:#fff;border:1px solid #ddd;border-radius:6px;padding:20px 24px;max-width:460px;}
+.c-box .r{padding:5px 0;font-size:14px;color:#555;}
+.c-box .l{color:#999;display:inline-block;width:56px;}
+footer{text-align:center;padding:24px;font-size:12px;color:#bbb;border-top:1px solid #ddd;}
+.lightbox{display:none;position:fixed;z-index:9999;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.92);justify-content:center;align-items:center;}
+.lightbox.show{display:flex;}
+.lightbox .wrap{position:relative;display:flex;align-items:center;justify-content:center;max-width:95vw;max-height:95vh;}
+.lightbox img{max-width:92vw;max-height:88vh;object-fit:contain;border-radius:6px;}
+.lightbox .x{position:fixed;top:18px;right:24px;font-size:30px;color:#888;background:none;border:none;cursor:pointer;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:sans-serif;}
+.lightbox .x:hover{color:#fff;background:rgba(255,255,255,0.1);}
+.lightbox .arrow{position:fixed;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,0.06);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:24px;color:#888;font-family:sans-serif;z-index:10;}
+.lightbox .arrow:hover{color:#fff;background:rgba(255,255,255,0.14);}
+.lightbox .arrow.prev{left:16px;}
+.lightbox .arrow.next{right:16px;}
+.lightbox .counter{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);color:#999;font-size:14px;background:rgba(0,0,0,0.5);padding:5px 16px;border-radius:16px;}
+@media(max-width:700px){.grid{grid-template-columns:repeat(2,1fr);}header{flex-direction:column!important;text-align:center!important;padding:24px 20px!important;}header>div:last-child{display:none!important;}.lightbox .arrow{width:36px;height:36px;font-size:18px;}.lightbox .arrow.prev{left:4px;}.lightbox .arrow.next{right:4px;}}@media(max-width:700px){.sec>div{flex-direction:column!important;gap:20px!important;}.sec>div>div:last-child{margin-left:0!important;text-align:center!important;width:100%!important;}}
+</style>
+</head>
+<body>
+<header style="display:flex;align-items:center;gap:28px;padding:36px 48px;background:#fff;border-bottom:1px solid #ddd;position:relative;">
+  <img src="images/photo.png" style="width:88px;height:88px;object-fit:cover;flex-shrink:0;display:block;">
+  <div>
+    <h1 style="font-size:18px;font-weight:600;color:#222;margin-bottom:2px;line-height:1.2;">周嘉进</h1>
+    <div style="font-size:14px;color:#888;">深圳大学 · 工业设计</div>
+    <div style="font-size:13px;color:#aaa;margin-top:2px;">智能硬件 · 工具装备 / AI渲染</div>
+    <div style="display:flex;flex-wrap:wrap;gap:5px;margin-top:8px;">
+      <span style="padding:2px 12px;background:#eee;border-radius:20px;font-size:12px;color:#666;">Rhino</span>
+      <span style="padding:2px 12px;background:#eee;border-radius:20px;font-size:12px;color:#666;">SolidWorks</span>
+      <span style="padding:2px 12px;background:#eee;border-radius:20px;font-size:12px;color:#666;">Keyshot</span>
+      <span style="padding:2px 12px;background:#eee;border-radius:20px;font-size:12px;color:#666;">AI 辅助设计</span>
+    </div>
+  </div>
+<div style="position:absolute;right:48px;top:50%;transform:translateY(-50%);font-size:clamp(32px,5vw,72px);font-weight:700;color:#e8e8e8;letter-spacing:4px;pointer-events:none;user-select:none;font-family:Inter,sans-serif;">Portfolio</div>
+</header>
+<div class="container">
+<div class="sec">
+<div class="sec-title">作品集</div>
+<div class="sec-hdr">
+<div class="name">本科项目与设计营作品集</div>
+<a class="dl" href="pdfs/深圳大学_周嘉进_本科项目与设计营作品集_有产品展示.pdf" target="_blank">下载 PDF</a>
+</div>
+<div class="grid" data-g="b">
+<img src="images/b_01.jpg" data-i="0" data-g="b">
+<img src="images/b_02.jpg" data-i="1" data-g="b">
+<img src="images/b_03.jpg" data-i="2" data-g="b">
+<img src="images/b_04.jpg" data-i="3" data-g="b">
+<img src="images/b_05.jpg" data-i="4" data-g="b">
+<img src="images/b_06.jpg" data-i="5" data-g="b">
+<img src="images/b_07.jpg" data-i="6" data-g="b">
+<img src="images/b_08.jpg" data-i="7" data-g="b">
+<img src="images/b_09.jpg" data-i="8" data-g="b">
+<img src="images/b_10.jpg" data-i="9" data-g="b">
+<img src="images/b_11.jpg" data-i="10" data-g="b">
+<img src="images/b_12.jpg" data-i="11" data-g="b">
+<img src="images/b_13.jpg" data-i="12" data-g="b">
+<img src="images/b_14.jpg" data-i="13" data-g="b">
+<img src="images/b_15.jpg" data-i="14" data-g="b">
+<img src="images/b_16.jpg" data-i="15" data-g="b">
+<img src="images/b_17.jpg" data-i="16" data-g="b">
+<img src="images/b_18.jpg" data-i="17" data-g="b">
+<img src="images/b_19.jpg" data-i="18" data-g="b">
+<img src="images/b_20.jpg" data-i="19" data-g="b">
+<img src="images/b_21.jpg" data-i="20" data-g="b">
+<img src="images/b_22.jpg" data-i="21" data-g="b">
+<img src="images/b_23.jpg" data-i="22" data-g="b">
+<img src="images/b_24.jpg" data-i="23" data-g="b">
+<img src="images/b_25.jpg" data-i="24" data-g="b">
+<img src="images/b_26.jpg" data-i="25" data-g="b">
+<img src="images/b_27.jpg" data-i="26" data-g="b">
+<img src="images/b_28.jpg" data-i="27" data-g="b">
+<img src="images/b_29.jpg" data-i="28" data-g="b">
+<img src="images/b_30.jpg" data-i="29" data-g="b">
+<img src="images/b_31.jpg" data-i="30" data-g="b">
+</div>
+<div class="sec-hdr">
+<div class="name">工作项目设计作品集</div>
+<a class="dl" href="pdfs/深圳大学_周嘉进_工作项目设计作品集.pdf" target="_blank">下载 PDF</a>
+</div>
+<div class="grid" data-g="w">
+<img src="images/w_01.jpg" data-i="0" data-g="w">
+<img src="images/w_02.jpg" data-i="1" data-g="w">
+<img src="images/w_03.jpg" data-i="2" data-g="w">
+<img src="images/w_04.jpg" data-i="3" data-g="w">
+<img src="images/w_05.jpg" data-i="4" data-g="w">
+<img src="images/w_06.jpg" data-i="5" data-g="w">
+<img src="images/w_07.jpg" data-i="6" data-g="w">
+<img src="images/w_08.jpg" data-i="7" data-g="w">
+<img src="images/w_09.jpg" data-i="8" data-g="w">
+<img src="images/w_10.jpg" data-i="9" data-g="w">
+<img src="images/w_11.jpg" data-i="10" data-g="w">
+<img src="images/w_12.jpg" data-i="11" data-g="w">
+<img src="images/w_13.jpg" data-i="12" data-g="w">
+<img src="images/w_14.jpg" data-i="13" data-g="w">
+<img src="images/w_15.jpg" data-i="14" data-g="w">
+<img src="images/w_16.jpg" data-i="15" data-g="w">
+<img src="images/w_17.jpg" data-i="16" data-g="w">
+<img src="images/w_18.jpg" data-i="17" data-g="w">
+<img src="images/w_19.jpg" data-i="18" data-g="w">
+<img src="images/w_20.jpg" data-i="19" data-g="w">
+<img src="images/w_21.jpg" data-i="20" data-g="w">
+<img src="images/w_22.jpg" data-i="21" data-g="w">
+<img src="images/w_23.jpg" data-i="22" data-g="w">
+<img src="images/w_24.jpg" data-i="23" data-g="w">
+<img src="images/w_25.jpg" data-i="24" data-g="w">
+</div>
+<div class="sec-hdr">
+<div class="name">AI生成作品集</div>
+<a class="dl" href="pdfs/深圳大学_周嘉进_AI作品集.pdf" target="_blank">下载 PDF</a>
+</div>
+<div class="grid" data-g="a">
+<img src="images/a_01.jpg" data-i="0" data-g="a">
+<img src="images/a_02.jpg" data-i="1" data-g="a">
+<img src="images/a_03.jpg" data-i="2" data-g="a">
+<img src="images/a_04.jpg" data-i="3" data-g="a">
+<img src="images/a_05.jpg" data-i="4" data-g="a">
+<img src="images/a_06.jpg" data-i="5" data-g="a">
+<img src="images/a_07.jpg" data-i="6" data-g="a">
+<img src="images/a_08.jpg" data-i="7" data-g="a">
+<img src="images/a_09.jpg" data-i="8" data-g="a">
+<img src="images/a_10.jpg" data-i="9" data-g="a">
+<img src="images/a_11.jpg" data-i="10" data-g="a">
+<img src="images/a_12.jpg" data-i="11" data-g="a">
+<img src="images/a_13.jpg" data-i="12" data-g="a">
+<img src="images/a_14.jpg" data-i="13" data-g="a">
+<img src="images/a_15.jpg" data-i="14" data-g="a">
+<img src="images/a_16.jpg" data-i="15" data-g="a">
+<img src="images/a_17.jpg" data-i="16" data-g="a">
+<img src="images/a_18.jpg" data-i="17" data-g="a">
+<img src="images/a_19.jpg" data-i="18" data-g="a">
+<img src="images/a_20.jpg" data-i="19" data-g="a">
+<img src="images/a_21.jpg" data-i="20" data-g="a">
+<img src="images/a_22.jpg" data-i="21" data-g="a">
+<img src="images/a_23.jpg" data-i="22" data-g="a">
+<img src="images/a_24.jpg" data-i="23" data-g="a">
+<img src="images/a_25.jpg" data-i="24" data-g="a">
+<img src="images/a_26.jpg" data-i="25" data-g="a">
+<img src="images/a_27.jpg" data-i="26" data-g="a">
+<img src="images/a_28.jpg" data-i="27" data-g="a">
+<img src="images/a_29.jpg" data-i="28" data-g="a">
+<img src="images/a_30.jpg" data-i="29" data-g="a">
+<img src="images/a_31.jpg" data-i="30" data-g="a">
+<img src="images/a_32.jpg" data-i="31" data-g="a">
+</div>
+</div>
+<div class="sec">
+<div class="sec-title">简历</div>
+<div class="r-box">
+<img src="images/r_01.jpg">
+<div class="d"><a href="pdfs/深圳大学_周嘉进_简历.pdf" target="_blank">下载简历 PDF</a></div>
+</div>
+</div>
+<div class="sec">
+<div class="sec-title">联系</div>
+<div style="display:flex;gap:40px;align-items:flex-start;">
+  <div class="c-box" style="flex:1;max-width:400px;">
+    <div class="r"><span class="l">姓名</span>周嘉进</div>
+    <div class="r"><span class="l">学校</span>深圳大学 · 工业设计</div>
+    <div class="r"><span class="l">电话</span>17702095524</div>
+    <div class="r"><span class="l">微信</span>17702095524</div>
+    <div class="r"><span class="l">地点</span>中国 · 深圳</div>
+  </div>
+  <div style="text-align:center;padding-top:4px;">
+    <img src="images/xiaohongshu.png" style="width:200px;height:200px;object-fit:contain;display:block;">
+    <div style="font-size:12px;color:#999;margin-top:4px;">小红书账号</div>
+  </div>
+</div>
+</div>
+</div>
+<footer>&copy; 2026 周嘉进 · 工业设计作品集</footer>
+<div class="lightbox" id="LB">
+<div class="wrap">
+<img id="LBimg" src="">
+</div>
+<button class="x" id="LBx">&times;</button>
+<button class="arrow prev" id="LBprev">&lsaquo;</button>
+<button class="arrow next" id="LBnext">&rsaquo;</button>
+<div class="counter" id="LBc"></div>
+</div>
+<script>
+var LB=document.getElementById("LB"),IM=document.getElementById("LBimg"),CX=document.getElementById("LBx"),PR=document.getElementById("LBprev"),NX=document.getElementById("LBnext"),CN=document.getElementById("LBc");
+var grp=null,idx=0,imgs={};
+document.querySelectorAll(".grid img").forEach(function(m){var g=m.dataset.g;if(!imgs[g])imgs[g]=[];imgs[g].push(m.src);
+m.onclick=function(){grp=g;idx=parseInt(this.dataset.i);show();};
+});
+function show(){if(!grp||!imgs[grp])return;upd();LB.classList.add("show");document.body.style.overflow="hidden";}
+function hide(){LB.classList.remove("show");document.body.style.overflow="";}
+function prv(){if(!grp)return;var a=imgs[grp];idx=(idx-1+a.length)%a.length;upd();}
+function nxt(){if(!grp)return;var a=imgs[grp];idx=(idx+1)%a.length;upd();}
+function upd(){var a=imgs[grp];IM.src=a[idx];CN.textContent=(idx+1)+" / "+a.length;}
+CX.onclick=hide;
+LB.onclick=function(e){if(e.target===LB)hide();};
+PR.onclick=function(e){e.stopPropagation();prv();};
+NX.onclick=function(e){e.stopPropagation();nxt();};
+document.addEventListener("keydown",function(e){if(!LB.classList.contains("show"))return;if(e.key==="Escape")hide();if(e.key==="ArrowLeft")prv();if(e.key==="ArrowRight")nxt();});
+</script>
+</body>
+</html>
